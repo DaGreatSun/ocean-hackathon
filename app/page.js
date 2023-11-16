@@ -1,5 +1,12 @@
-import Image from "next/image";
+import { Row, Col } from "@components/CustomComponents";
 
 export default function Home() {
-  return <h1>Hellooo</h1>;
+  return (
+    <Row>
+      <Col>hehehehe</Col>
+      <Col>hehehehe</Col>
+      <Col>hehehehe</Col>
+      <Col>hehehehe</Col>
+    </Row>
+  );
 }
