@@ -7,7 +7,7 @@ const nextConfig = {
     REST_API_URL: "",
     MONGODB_DB: "eHealthcare",
     MONGODB_URI:
-      "mongodb+srv://rukafyp:rukaisfyp@ehealthcareplatfom.8nc2ggw.mongodb.net/",
+      "mongodb+srv://oceanhack:oceanhack2023@ocean-hackathon.jir5uf4.mongodb.net/?retryWrites=true&w=majority",
   },
   webpack(config, options) {
     config.module.rules.push({
