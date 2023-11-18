@@ -80,6 +80,34 @@ function BusinessOwnerNavigation() {
     },
   ];
 
+  function addIcon() {
+    return (
+      <div className="p-4">
+        <div
+          className="btn btn-circle self-center"
+          style={{
+            backgroundColor: "#15FF25",
+            border: "none",
+            borderRadius: "50%",
+            width: "50px",
+            height: "50px",
+            justifyContent: "center",
+            alignItems: "center",
+            display: "flex",
+            boxShadow: "0 6px 4px rgba(100, 100, 100, 0.15)",
+          }}
+        >
+          <FaPlus
+            fill="white"
+            size={20}
+            style={{ objectFit: "cover", color: "white" }}
+            alt=""
+          />
+        </div>
+      </div>
+    );
+  }
+
   const router = useRouter();
 
   React.useEffect(() => {
@@ -94,7 +122,7 @@ function BusinessOwnerNavigation() {
 
           return (
             <>
-              <div style={styles.column} key={key}>
+              <div style={styles.column} key={"navigation-key-" + key}>
                 <Link
                   href={item.route}
                   onClick={() => {
@@ -102,7 +130,7 @@ function BusinessOwnerNavigation() {
                   }}
                 >
                   <div
-                    className="bg-[#76C893] hover:bg-green-400"
+                    className="bg-[#76C893] transition-colors delay-100 ease-in-out hover:bg-green-400"
                     style={{
                       ...s,
                       // backgroundColor:
@@ -118,36 +146,11 @@ function BusinessOwnerNavigation() {
                   </div>
                 </Link>
               </div>
-              {key === routes.length - 1 ? (
-                <div className="p-4">
-                  <div
-                    className="btn btn-circle self-center"
-                    style={{
-                      backgroundColor: "#15FF25",
-                      border: "none",
-                      borderRadius: "50%",
-                      width: "50px",
-                      height: "50px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      display: "flex",
-                      boxShadow: "0 6px 4px rgba(100, 100, 100, 0.15)",
-                    }}
-                  >
-                    <FaPlus
-                      fill="white"
-                      size={20}
-                      style={{ objectFit: "cover", color: "white" }}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div />
-              )}
+              {key === routes.length - 1 ? addIcon() : <div />}
             </>
           );
         })}
+        {!routes || routes.length === 0 ? addIcon() : <div />}
       </div>
     </>
   );
