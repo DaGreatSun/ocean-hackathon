@@ -37,7 +37,7 @@ function Header(props) {
   }, []);
 
   return (
-    <div className="flex h-20 w-full items-center justify-between border border-b-black bg-white bg-opacity-95 px-10">
+    <div className="flex h-20 w-full items-center justify-between border border-b-gray-300 bg-white bg-opacity-95 px-10">
       <div className="flex">
         <div className="dropdown dropdown-end z-[999]">
           <label

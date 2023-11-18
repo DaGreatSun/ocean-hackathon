@@ -7,7 +7,8 @@ export default function LayoutTemplate({ children }) {
         style={{
           objectFit: "cover",
           width: "100%",
-          height: 250,
+          height: 350,
+          objectPosition: "50% 75%",
         }}
         alt=""
       />
