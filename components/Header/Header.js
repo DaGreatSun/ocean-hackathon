@@ -37,7 +37,7 @@ function Header(props) {
   }, []);
 
   return (
-    <div className="flex h-20 w-full items-center justify-between border border-b-black bg-white bg-opacity-95 px-5">
+    <div className="flex h-20 w-full items-center justify-between border border-b-black bg-white bg-opacity-95 px-10">
       <div className="flex">
         <div className="dropdown dropdown-end z-[999]">
           <label
@@ -75,7 +75,7 @@ function Header(props) {
         </div>
       </div>
       <div>
-        <Row totalCol={3} style={"gap-12 pr-5"}>
+        <Row totalCol={3} style={"gap-12"}>
           <Col colSize={1}>
             <Link href={"/businessOwner"}>
               <IoHomeOutline size={24} />

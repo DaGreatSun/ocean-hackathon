@@ -8,4 +8,57 @@ html {
 }
 
 @tailwind components;
+
+.card {
+  background-color: white;
+  border-color: rgba(182, 182, 182, 0.315);
+  box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.35);
+  padding: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.card-body {
+  padding: 0em;
+}
+
+.table :where(thead, tbody) tr {
+  border-bottom-width: 0em;
+}
+
+.table-zebra tbody tr:nth-child(odd) {
+  background-color: #e4e4e4;
+}
+
+.table-zebra tbody tr:nth-child(even) {
+  background-color: white;
+}
+
 @tailwind utilities;
+
+/*** START Customize scrollbar ******/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  margin: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #343a40;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b5b6b7;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00a6ff;
+}
+
+/*** End Customize scrollbar *******/

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ["react-daisyui"],
   reactStrictMode: false,
   env: {
     JWT_KEY: "EHEALTH_WEB_APP_JWT_KEY",
