@@ -1,7 +1,7 @@
+"use client";
 import React from "react";
 import { Form, Input, InputGroup, Select, Textarea } from "react-daisyui";
 import { Row, Col } from "@components/CustomComponents";
-import Editor from "@components/Editor";
 import { twMerge } from "tailwind-merge";
 // import MySunEditor from "@components/MySunEditor";
 
@@ -205,30 +205,6 @@ function SimpleForm(props) {
           value={props.value}
           disabled={disabled}
           step={step}
-          onBlur={props.onBlur}
-        />
-      </Col>
-    );
-  } else if (props.type === "editor") {
-    return (
-      <Col colSize={props.size ?? 12}>
-        {props.name && props.name !== "" ? (
-          <label className="label py-1 font-bold">{props.name}</label>
-        ) : (
-          <div />
-        )}
-
-        <Editor
-          className={`w-full ${
-            props.required ? "border border-green-500" : ""
-          } ${props.className}`}
-          id={"id" in props ? props.id : "input-" + props.name}
-          size="md"
-          placeholder={"placeholder" in props ? props.placeholder : props.name}
-          type={props.type}
-          onChange={props.onChange}
-          value={props.value}
-          disabled={props.disable}
           onBlur={props.onBlur}
         />
       </Col>

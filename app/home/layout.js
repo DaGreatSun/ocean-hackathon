@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }) {
   return (
     <LayoutTemplate>
       <Header name={"Business Owner"} />
-      <div className="bg-white bg-opacity-70 p-3">{children}</div>
+      <div className="bg-white bg-opacity-70 p-0">{children}</div>
     </LayoutTemplate>
   );
 }

@@ -13,6 +13,7 @@ export default function LayoutTemplate({ children }) {
         alt=""
       />
       <div className="relative z-10 -mt-10 sm:mx-0 md:mx-[5%]">{children}</div>
+      <div className="h-10" />
     </>
   );
 }

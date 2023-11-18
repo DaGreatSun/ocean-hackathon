@@ -135,7 +135,7 @@ function Header(props) {
             </div>
           </Col>
           <Col colSize={1}>
-            <Link href={"/"}>
+            <Link href={"/home"}>
               <IoLogOutOutline size={24} />
             </Link>
           </Col>
