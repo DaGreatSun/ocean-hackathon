@@ -144,7 +144,7 @@ export default function Home() {
                 type={"select"}
                 options={[
                   { text: "", value: "" },
-                  { text: "Activity", value: "" },
+                  { text: "Activity", value: "Activity" },
                   { text: "Accomodation", value: "Accomodation" },
                   { text: "Transportation", value: "Transportation" },
                 ]}

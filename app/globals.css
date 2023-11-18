@@ -34,6 +34,17 @@ html {
   background-color: white;
 }
 
+.collapse[open] > :where(.collapse-content),
+.collapse-open > :where(.collapse-content),
+.collapse:focus:not(.collapse-close) > :where(.collapse-content),
+.collapse:not(.collapse-close)
+  > :where(input[type="checkbox"]:checked ~ .collapse-content),
+.collapse:not(.collapse-close)
+  > :where(input[type="radio"]:checked ~ .collapse-content) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 @tailwind utilities;
 
 /*** START Customize scrollbar ******/

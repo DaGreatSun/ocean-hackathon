@@ -1,9 +1,12 @@
 import {
   FaFacebook,
+  FaGlobe,
   FaInstagram,
   FaLocationPin,
   FaPhone,
+  FaYoutube,
 } from "react-icons/fa6";
+import { IoBrowsers } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 
 export default function LayoutTemplate({ children }) {
@@ -47,6 +50,14 @@ export default function LayoutTemplate({ children }) {
                 </span>
                 <span className="text-white">+60 12-345 6789</span>
               </div>
+              <div className="col-span-1 inline-flex items-center">
+                <span className="p-2">
+                  <FaGlobe fill="#ffffff" size={20} />
+                </span>
+                <span className="text-white">
+                  https://www.campusmer.fr/home-4185-0-0-0.html
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -54,12 +65,6 @@ export default function LayoutTemplate({ children }) {
           <h1 className="py-6 text-center text-2xl text-white">Socials</h1>
           <div className="flex place-content-center items-center pb-7">
             <div className="grid grid-cols-1">
-              <div className="col-span-1 inline-flex items-center">
-                <span className="p-2">
-                  <FaPhone fill="#ffffff" size={20} />
-                </span>
-                <span className="text-white">+60 12-345 6789</span>
-              </div>
               <div className="col-span-1 inline-flex items-center">
                 <span className="p-2">
                   <FaFacebook fill="#ffffff" size={20} />
@@ -71,6 +76,12 @@ export default function LayoutTemplate({ children }) {
                   <FaInstagram fill="#ffffff" size={20} />
                 </span>
                 <span className="text-white">@ocean_hackathon_kl</span>
+              </div>
+              <div className="col-span-1 inline-flex items-center">
+                <span className="p-2">
+                  <FaYoutube fill="#ffffff" size={20} />
+                </span>
+                <span className="text-white">@campusmondialdelamer8156</span>
               </div>
             </div>
           </div>
