@@ -32,6 +32,9 @@ module.exports = {
     },
   ],
   theme: {
+    backgroundImage: {
+      loginBG: "url('../public/assets/img/top.jpg')",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
