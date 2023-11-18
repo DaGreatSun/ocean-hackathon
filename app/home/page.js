@@ -2,15 +2,83 @@
 import { Row, Col } from "@components/CustomComponents";
 import React from "react";
 import SimpleForm from "@components/SimpleForm/SimpleForm";
-import { Carousel, Button, Form } from "react-daisyui";
+import { Carousel, Button, Card } from "react-daisyui";
 
 export default function Home() {
   const [destination, setDestination] = React.useState("");
   const [date, setDate] = React.useState("");
-  const promotionArr = [];
+  const [filter, setFilter] = React.useState("");
+
+  const promotionArr = [
+    {
+      name: "Langkawi",
+      description: "Most Beautiful Island",
+      offer: "20",
+      image: "/pictures/dolphins.jpg",
+    },
+    {
+      name: "",
+      description: "",
+      offer: "30",
+      image: "/pictures/archipelago.jpg",
+    },
+    { name: "", description: "", offer: "", image: "/pictures/barnacles.jpg" },
+    {
+      name: "",
+      description: "",
+      offer: "40",
+      image: "/pictures/beach_hammock.jpg",
+    },
+    { name: "", description: "", offer: "", image: "/pictures/caves.jpg" },
+    {
+      name: "",
+      description: "",
+      offer: "15",
+      image: "/pictures/hut_by_the_beach.jpg",
+    },
+    { name: "", description: "", offer: "25", image: "/pictures/starfish.jpg" },
+  ];
+  const result = [{}];
 
   function promotionCarousel() {
-    return <Carousel>{promotionArr.map((item, index) => {})}</Carousel>;
+    return (
+      <Carousel className="overflow-x-auto rounded-2xl">
+        {promotionArr.map((item, index) => {
+          return (
+            <Carousel.Item
+              alt=""
+              key={`carousel-${index}`}
+              className="cursor-pointer"
+            >
+              <div className="relative">
+                <img
+                  src={item.image}
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                    width: 250,
+                    height: 300,
+                    objectPosition: "50% 75%",
+                  }}
+                  alt=""
+                />
+                <div className="absolute left-0 top-0 rounded-br-2xl bg-red-500 p-2">
+                  <span className="text-center font-bold text-white">
+                    {item.offer}% off
+                  </span>
+                </div>
+                <div className="absolute bottom-0 h-24 min-w-full bg-black bg-opacity-30 p-2">
+                  <h1 className="text-center font-bold text-white">
+                    {item.name}
+                  </h1>
+                  <h1 className="text-center text-white">{item.description}</h1>
+                </div>
+              </div>
+            </Carousel.Item>
+          );
+        })}
+      </Carousel>
+    );
   }
 
   return (
@@ -19,7 +87,6 @@ export default function Home() {
         <div className="col-span-6 lg:col-span-12">
           <div className="relative">
             <img
-              // className="h-[10]"
               src={"/pictures/archipelago.jpg"}
               style={{
                 objectFit: "cover",
@@ -44,8 +111,8 @@ export default function Home() {
           </div>
         </div>
         <div className="col-span-6 pt-4 lg:col-span-12">
-          <div className="container grid max-w-full grid-cols-5 gap-2 p-2 lg:grid-cols-12">
-            <div className="col-span-5 my-0">
+          <div className="container grid max-w-full grid-cols-3 gap-2 p-2 lg:grid-cols-12">
+            <div className="col-span-3 my-0">
               <SimpleForm
                 key={"key-destination"}
                 size={5}
@@ -57,7 +124,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="col-span-5 my-0">
+            <div className="col-span-3 my-0">
               <SimpleForm
                 key={"key-date"}
                 size={5}
@@ -69,7 +136,25 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="col-span-5 my-0 flex items-center lg:col-span-2">
+            <div className="col-span-3 my-0">
+              <SimpleForm
+                key={"key-filter"}
+                size={5}
+                name={"Filter"}
+                type={"select"}
+                options={[
+                  { text: "", value: "" },
+                  { text: "Activity", value: "" },
+                  { text: "Accomodation", value: "Accomodation" },
+                  { text: "Transportation", value: "Transportation" },
+                ]}
+                value={filter}
+                onChange={(e) => {
+                  setFilter(e.target.value);
+                }}
+              />
+            </div>
+            <div className="col-span-3 my-0 flex items-center">
               <Button
                 className="min-w-full rounded-full"
                 onClick={(e) => {
@@ -82,36 +167,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="col-span-6 border-r-2 p-2 lg:col-span-12">
+          <h1 className="p-3 text-center text-3xl font-bold">
+            Results (REMOVE)
+          </h1>
+        </div>
         <div className="col-span-6 p-2 lg:col-span-12">
-          <h1 className="text-center text-3xl font-bold">Promotions</h1>
+          <h1 className="p-3 text-center text-3xl font-bold">Promotions</h1>
           {promotionCarousel()}
-        </div>
-        <div className="col-span-6 my-0">
-          <img
-            src={"/pictures/archipelago.jpg"}
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: 500,
-              objectPosition: "50% 75%",
-            }}
-            alt=""
-          />
-        </div>
-        <div className="col-span-6 p-10">
-          <h1 className="pb-4 text-3xl">Our Mission</h1>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            auctor purus velit, nec porta dui vehicula ac. Vestibulum vitae
-            pretium odio. Aliquam nec lectus eu arcu accumsan condimentum ut in
-            enim. Mauris consequat elementum nunc ut tincidunt. Vestibulum
-            consequat urna ut enim ullamcorper blandit. Cras sit amet elit a
-            metus fermentum dapibus nec at orci. In sodales, sapien eu tincidunt
-            scelerisque, sem risus aliquet ante, non elementum orci ipsum varius
-            eros. Pellentesque non placerat ligula. Sed semper scelerisque
-            iaculis. Sed quis vulputate ipsum. Ut sed fringilla metus.
-            Vestibulum id nibh est. Suspendisse scelerisque luctus facilisis.
-          </p>
         </div>
       </div>
     </>

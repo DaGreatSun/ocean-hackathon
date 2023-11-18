@@ -1,7 +1,7 @@
 "use client";
 import { Row, Col } from "@components/CustomComponents";
 import Link from "next/link";
-import Router from "next/router";
+import Router from "next/navigation";
 import React, { useState } from "react";
 import { Avatar, Button, Dropdown, Menu } from "react-daisyui";
 import { GiBoatFishing } from "react-icons/gi";
@@ -31,7 +31,7 @@ function Header(props) {
     return (
       <Link href={path ?? ""}>
         <Button className="h-20 w-32 rounded-none border-0 bg-opacity-0 text-lg font-normal text-black hover:bg-gray-200">
-          <Link href={path ?? ""}>{name}</Link>
+          {name}
         </Button>
       </Link>
     );
