@@ -18,7 +18,7 @@ export default function About() {
             style={{
               objectFit: "cover",
               width: "100%",
-              height: 500,
+              height: 350,
               objectPosition: "50% 75%",
             }}
             alt=""
@@ -28,17 +28,10 @@ export default function About() {
           <div>
             <h1 className="pb-4 text-3xl">Our Mission</h1>
             <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              auctor purus velit, nec porta dui vehicula ac. Vestibulum vitae
-              pretium odio. Aliquam nec lectus eu arcu accumsan condimentum ut
-              in enim. Mauris consequat elementum nunc ut tincidunt. Vestibulum
-              consequat urna ut enim ullamcorper blandit. Cras sit amet elit a
-              metus fermentum dapibus nec at orci. In sodales, sapien eu
-              tincidunt scelerisque, sem risus aliquet ante, non elementum orci
-              ipsum varius eros. Pellentesque non placerat ligula. Sed semper
-              scelerisque iaculis. Sed quis vulputate ipsum. Ut sed fringilla
-              metus. Vestibulum id nibh est. Suspendisse scelerisque luctus
-              facilisis.
+              Our mission is to ensure the tourism industry is positioned to
+              provide decent jobs, stable incomes and protect our cultural and
+              natural heritage. We aim to provide accessibility of the science
+              we need for the ocean we want.
             </p>
           </div>
         </div>
@@ -46,17 +39,10 @@ export default function About() {
           <div>
             <h1 className="pb-4 text-3xl">Our Team</h1>
             <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              auctor purus velit, nec porta dui vehicula ac. Vestibulum vitae
-              pretium odio. Aliquam nec lectus eu arcu accumsan condimentum ut
-              in enim. Mauris consequat elementum nunc ut tincidunt. Vestibulum
-              consequat urna ut enim ullamcorper blandit. Cras sit amet elit a
-              metus fermentum dapibus nec at orci. In sodales, sapien eu
-              tincidunt scelerisque, sem risus aliquet ante, non elementum orci
-              ipsum varius eros. Pellentesque non placerat ligula. Sed semper
-              scelerisque iaculis. Sed quis vulputate ipsum. Ut sed fringilla
-              metus. Vestibulum id nibh est. Suspendisse scelerisque luctus
-              facilisis.
+              Sea D&E is a platform for booking your next ocean adventure,
+              whether it is to find coastal accommodations that adhere to green
+              practices, or activities like scuba diving, snorkeling, and
+              kayaking that adhere to best practice for a wholesome experience.
             </p>
           </div>
         </div>
@@ -66,7 +52,7 @@ export default function About() {
             style={{
               objectFit: "cover",
               width: "100%",
-              height: 500,
+              height: 350,
               objectPosition: "50% 75%",
             }}
             alt=""

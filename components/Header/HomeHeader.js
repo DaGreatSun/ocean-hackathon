@@ -30,7 +30,7 @@ function Header(props) {
   function navButton(name, path) {
     return (
       <Link href={path ?? ""}>
-        <Button className="h-20 w-32 rounded-none border-0 bg-opacity-0 text-lg font-normal text-black hover:bg-gray-200">
+        <Button className="h-10 w-full rounded-none border-0 bg-opacity-0 text-lg font-normal text-black hover:bg-gray-200 lg:h-20 lg:w-32">
           {name}
         </Button>
       </Link>
@@ -40,23 +40,22 @@ function Header(props) {
   React.useEffect(() => {}, []);
 
   return (
-    <div className="flex h-20 w-full items-center justify-between border border-b-gray-300 bg-white bg-opacity-95 px-10">
-      <div className="w items-center text-xl">Welcome</div>
+    <div className="w-full items-center border border-b-gray-300 bg-white bg-opacity-95 lg:flex lg:justify-between lg:px-10">
       <div>
-        <Row totalCol={4} style={"h-20 items-center gap-0 text-xl"}>
-          <Col colSize={1} style={"h-20 items-center"}>
+        <div className="grid grid-cols-1 lg:grid-cols-4">
+          <Col colSize={1} style={" items-center"}>
             {navButton("HOME", "/home")}
           </Col>
-          <Col colSize={1} style={"h-20 items-center"}>
+          <Col colSize={1} style={"items-center"}>
             {navButton("ABOUT US", "/home/about")}
           </Col>
-          <Col colSize={1} style={"h-20 items-center"}>
+          <Col colSize={1} style={"items-center"}>
             {navButton("DATA", "/home/data")}
           </Col>
-          <Col colSize={1} style={"h-20 items-center"}>
+          <Col colSize={1} style={"items-center"}>
             {navButton("SIGN IN", "/login")}
           </Col>
-        </Row>
+        </div>
       </div>
     </div>
   );

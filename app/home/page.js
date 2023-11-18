@@ -91,21 +91,21 @@ export default function Home() {
               style={{
                 objectFit: "cover",
                 width: "100%",
-                height: 350,
-                objectPosition: "50% 50%",
+                height: 400,
+                objectPosition: "50% 20%",
               }}
               alt=""
             />
-            <div className="absolute inset-x-0 bottom-8 w-full px-[10%] py-2.5 text-center text-2xl">
-              <div className="text-5xl text-white">
-                Lorem ipsum dolor sit amet
+            <div className="absolute inset-x-0 bottom-8 w-full px-[10%] py-2.5 text-center text-2xl lg:px-[20%]">
+              <div className="text-5xl font-bold text-white ">
+                PROTECTING THE OCEAN
               </div>
-              <div className="text-3xl text-white">
-                consectetur adipiscing elit.
+              <div className="text-3xl font-light text-white">
+                THROUGH RESPONSIBLE TOURISM
               </div>
               <div className="text-xl text-white">
-                Curabitur auctor purus velit, nec porta dui vehicula ac.
-                Vestibulum vitae pretium odio. Lorem ipsum dolor sit amet,
+                Embrace the beauty, preserve the wonders; let responsible
+                tourism be the tide that nurtures our marine treasures.
               </div>
             </div>
           </div>
@@ -166,11 +166,6 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="col-span-6 border-r-2 p-2 lg:col-span-12">
-          <h1 className="p-3 text-center text-3xl font-bold">
-            Results (REMOVE)
-          </h1>
         </div>
         <div className="col-span-6 p-2 lg:col-span-12">
           <h1 className="p-3 text-center text-3xl font-bold">Promotions</h1>

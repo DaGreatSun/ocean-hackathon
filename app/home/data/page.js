@@ -5,6 +5,79 @@ import SimpleForm from "@components/SimpleForm/SimpleForm";
 import { Carousel, Button, Card, Accordion } from "react-daisyui";
 
 export default function Data() {
+  const mapData = [
+    {
+      name: "CM01K",
+      state: "Kedah",
+      location: "Pulau Langakawi",
+      longitude: "99.79086",
+      latitude: "6.294944",
+    },
+    {
+      name: "CM02M",
+      state: "Melaka",
+      location: "Pulau Undan, Melaka",
+      longitude: "102.334742",
+      latitude: "2.047799",
+    },
+    {
+      name: "CM03N",
+      state: "Negeri Sembilan",
+      location: "Port Dickson, Negeri Sembilan",
+      longitude: "101.788525",
+      latitude: "2.513106",
+    },
+    {
+      name: "CM04J",
+      state: "Johor",
+      location: "Tanjung Piai, Johor",
+      longitude: "103.509578",
+      latitude: "1.260289",
+    },
+    {
+      name: "CM05J",
+      state: "Johor",
+      location: "Tanjung Pengelih, Johor",
+      longitude: "104.08765",
+      latitude: "1.369875",
+    },
+    {
+      name: "CM10S",
+      state: "W.P Labuan",
+      location: "W.P. Labuan",
+      longitude: "115.240514",
+      latitude: "5.276614",
+    },
+    {
+      name: "CM11Q",
+      state: "Sarawak",
+      location: "Santubong, Sarawak",
+      longitude: "110.328208",
+      latitude: "1.716522",
+    },
+    {
+      name: "CM12A",
+      state: "Perak",
+      location: "Perak",
+      longitude: "100.536925",
+      latitude: "4.224834",
+    },
+    {
+      name: "CM13T",
+      state: "Terengganu",
+      location: "Pulau Kapas, Terengganu",
+      longitude: "103.261203",
+      latitude: "5.217085",
+    },
+    {
+      name: "CM14S",
+      state: "Sabah",
+      location: "Teluk Sepanggar, Sabah",
+      longitude: "116.116331",
+      latitude: "6.068786",
+    },
+  ];
+
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
   const [organization, setOrganization] = React.useState("");
@@ -19,21 +92,20 @@ export default function Data() {
         }
       >
         <div className="col-span-12">
-          {/* <img
+          <img
             src={"/assets/img/greenfin-map.png"}
             style={{
               objectFit: "cover",
               width: "100%",
-              height: 599,
               objectPosition: "50% 75%",
             }}
             alt=""
-          /> */}
+          />
         </div>
         <div className="col-span-12 flex items-center p-5">
           <Card>
             <Card.Title>
-              <h1 className="pb-4 text-3xl">Our Mission</h1>
+              <h1 className="pb-4 text-3xl">Current Health</h1>
             </Card.Title>
             <p className="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -57,7 +129,7 @@ export default function Data() {
                 Wish to use our data? Click Me!
               </h1>
             </Accordion.Title>
-            <Accordion.Content className="hi border-t-2 bg-white">
+            <Accordion.Content className="hi -mt-2 border-t-2 bg-white">
               <Row style={"m-0 p-0"}>
                 <Col>
                   <h1 className="text-center text-lg">
