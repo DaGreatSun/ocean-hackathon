@@ -40,7 +40,7 @@ function Header(props) {
   React.useEffect(() => {}, []);
 
   return (
-    <div className="w-full items-center border border-b-gray-300 bg-white bg-opacity-95 lg:flex lg:justify-between lg:px-10">
+    <div className="w-full items-center border-b-2 border-b-gray-300 bg-white bg-opacity-95 lg:flex lg:justify-between lg:px-10">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-4">
           <Col colSize={1} style={" items-center"}>
