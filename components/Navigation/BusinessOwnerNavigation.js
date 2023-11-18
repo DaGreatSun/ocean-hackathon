@@ -2,9 +2,14 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-// Cyling Imports
-import { GiCycling } from "react-icons/gi";
+// Icon Imports
+import { IconContext } from "react-icons";
+import { GiBoatEngine, GiCycling, GiJungle } from "react-icons/gi";
+import { IoMdAdd } from "react-icons/io";
+import { FaCirclePlus, FaPlus } from "react-icons/fa6";
 import { Button } from "react-daisyui";
+import { MdKayaking } from "react-icons/md";
+import { IoBoat } from "react-icons/io5";
 
 function BusinessOwnerNavigation() {
   const [locationRef, setLocationRef] = React.useState("");
@@ -15,13 +20,12 @@ function BusinessOwnerNavigation() {
     row: {
       display: "flex",
       overflow: "auto",
-      marginBottom: 30,
     },
     column: {
       padding: 15,
+      paddingTop: 0,
     },
     icon: {
-      backgroundColor: "#C5DCE7",
       borderRadius: "50%",
       width: "80px",
       height: "80px",
@@ -45,17 +49,33 @@ function BusinessOwnerNavigation() {
   const routes = [
     {
       title: "KAYAKING",
-      icon: <GiCycling size={40} style={{ objectFit: "cover" }} alt="" />,
+      icon: (
+        <MdKayaking
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
+      ),
       route: "/businessOwner/activity/kayaking",
     },
     {
       title: "JUNGLE TREKKING",
-      icon: <GiCycling size={40} style={{ objectFit: "cover" }} alt="" />,
+      icon: (
+        <GiJungle
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
+      ),
       route: "/businessOwner/activity/jungleTrekking",
     },
     {
       title: "BOAT TOUR",
-      icon: <GiCycling size={40} style={{ objectFit: "cover" }} alt="" />,
+      icon: (
+        <IoBoat size={50} fill="white" style={{ objectFit: "cover" }} alt="" />
+      ),
       route: "/businessOwner/activity/boatTour",
     },
   ];
@@ -66,38 +86,66 @@ function BusinessOwnerNavigation() {
     setLocationRef(window.location.href);
   }, [counter]);
 
-  React.useEffect(() => {
-    setTempRoutes(routes);
-  }, [locationRef]);
-
   return (
     <>
       <div style={styles.row}>
-        {tempRoutes.map((item, key) => {
+        {routes.map((item, key) => {
           var s = { ...styles.icon };
 
           return (
-            <div style={styles.column} key={key}>
-              <Link
-                href={item.route}
-                onClick={() => {
-                  setCounter(counter + 1);
-                }}
-              >
-                <div
-                  style={{
-                    ...s,
-                    // backgroundColor:
-                    //   locationRef.indexOf(item.route) !== -1
-                    //     ? "#111111"
-                    //     : "#C5DCE7",
+            <>
+              <div style={styles.column} key={key}>
+                <Link
+                  href={item.route}
+                  onClick={() => {
+                    setCounter(counter + 1);
                   }}
                 >
-                  {item.icon}
+                  <div
+                    className="bg-[#76C893] hover:bg-green-400"
+                    style={{
+                      ...s,
+                      // backgroundColor:
+                      //   locationRef.indexOf(item.route) !== -1
+                      //     ? "#111111"
+                      //     : "#C5DCE7",
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+                  <div className="pt-1" style={styles.title}>
+                    {item.title}
+                  </div>
+                </Link>
+              </div>
+              {key === routes.length - 1 ? (
+                <div className="p-4">
+                  <div
+                    className="btn btn-circle self-center"
+                    style={{
+                      backgroundColor: "#15FF25",
+                      border: "none",
+                      borderRadius: "50%",
+                      width: "50px",
+                      height: "50px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      display: "flex",
+                      boxShadow: "0 6px 4px rgba(100, 100, 100, 0.15)",
+                    }}
+                  >
+                    <FaPlus
+                      fill="white"
+                      size={20}
+                      style={{ objectFit: "cover", color: "white" }}
+                      alt=""
+                    />
+                  </div>
                 </div>
-                <div style={styles.title}>{item.title}</div>
-              </Link>
-            </div>
+              ) : (
+                <div />
+              )}
+            </>
           );
         })}
       </div>
