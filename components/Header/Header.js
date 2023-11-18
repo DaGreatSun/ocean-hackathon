@@ -78,12 +78,12 @@ function Header(props) {
         <Row totalCol={3} style={"gap-12 pr-5"}>
           <Col colSize={1}>
             <Link href={"/businessOwner"}>
-              <IoHomeOutline size={23} />
+              <IoHomeOutline size={24} />
             </Link>
           </Col>
           <Col colSize={1}>
             <div className="dropdown dropdown-end z-[999]">
-              <IoNotificationsOutline size={23} tabIndex={1} />
+              <IoNotificationsOutline size={24} tabIndex={1} />
               <ul
                 tabIndex={1}
                 className="dropdown-content rounded-box mt-3 w-80 bg-white text-sm shadow"
@@ -91,7 +91,7 @@ function Header(props) {
                 <li>
                   <div className="py-3 text-center font-bold">
                     <h6 className="text-muted m-0 text-sm">
-                      You have <span className="text-info">3</span>{" "}
+                      You have<span className="text-info">{" 5 "}</span>
                       notifications.
                     </h6>
                   </div>
@@ -125,18 +125,18 @@ function Header(props) {
                   <hr />
                 </li>
                 <li>
-                  <Link href="">
+                  <a className="hover:cursor-pointer">
                     <div className="py-3 text-center font-bold text-info">
                       View all
                     </div>
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
           </Col>
           <Col colSize={1}>
             <Link href={"/"}>
-              <IoLogOutOutline size={23} />
+              <IoLogOutOutline size={24} />
             </Link>
           </Col>
         </Row>
