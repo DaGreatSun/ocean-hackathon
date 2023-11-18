@@ -102,7 +102,7 @@ function BusinessOwnerNavigation() {
                   }}
                 >
                   <div
-                    className="bg-[#76C893] hover:bg-green-400"
+                    className="bg-[#76C893] transition-colors delay-100 ease-in-out hover:bg-green-400"
                     style={{
                       ...s,
                       // backgroundColor:
