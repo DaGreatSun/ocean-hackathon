@@ -3,80 +3,60 @@ import { Row, Col } from "@components/CustomComponents";
 import React from "react";
 import SimpleForm from "@components/SimpleForm/SimpleForm";
 import { Carousel, Button, Card, Accordion } from "react-daisyui";
+import LineCustom from "@components/ChartCustom/LineCustom";
+import DoughnutCustom from "@components/ChartCustom/DoughnutCustom";
 
 export default function Data() {
-  const mapData = [
-    {
-      name: "CM01K",
-      state: "Kedah",
-      location: "Pulau Langakawi",
-      longitude: "99.79086",
-      latitude: "6.294944",
-    },
-    {
-      name: "CM02M",
-      state: "Melaka",
-      location: "Pulau Undan, Melaka",
-      longitude: "102.334742",
-      latitude: "2.047799",
-    },
-    {
-      name: "CM03N",
-      state: "Negeri Sembilan",
-      location: "Port Dickson, Negeri Sembilan",
-      longitude: "101.788525",
-      latitude: "2.513106",
-    },
-    {
-      name: "CM04J",
-      state: "Johor",
-      location: "Tanjung Piai, Johor",
-      longitude: "103.509578",
-      latitude: "1.260289",
-    },
-    {
-      name: "CM05J",
-      state: "Johor",
-      location: "Tanjung Pengelih, Johor",
-      longitude: "104.08765",
-      latitude: "1.369875",
-    },
-    {
-      name: "CM10S",
-      state: "W.P Labuan",
-      location: "W.P. Labuan",
-      longitude: "115.240514",
-      latitude: "5.276614",
-    },
-    {
-      name: "CM11Q",
-      state: "Sarawak",
-      location: "Santubong, Sarawak",
-      longitude: "110.328208",
-      latitude: "1.716522",
-    },
-    {
-      name: "CM12A",
-      state: "Perak",
-      location: "Perak",
-      longitude: "100.536925",
-      latitude: "4.224834",
-    },
-    {
-      name: "CM13T",
-      state: "Terengganu",
-      location: "Pulau Kapas, Terengganu",
-      longitude: "103.261203",
-      latitude: "5.217085",
-    },
-    {
-      name: "CM14S",
-      state: "Sabah",
-      location: "Teluk Sepanggar, Sabah",
-      longitude: "116.116331",
-      latitude: "6.068786",
-    },
-  ];
+  const lineData = {
+    labels: [
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+    ],
+    datasets: [
+      {
+        data: [
+          1012.31, 1063.21, 1115.82, 1154.61, 1207.03, 1248.07, 1339.57,
+          1414.06, 1463.68, 406.89, 458.39, 969.4,
+        ],
+        borderColor: "darkblue",
+        label: "International Tourist Arrivals (million)",
+      },
+    ],
+  };
+
+  const doughnutPatientData = {
+    labels: [
+      "Europe",
+      "Americas",
+      "Asia and the Pacific",
+      "Middle East",
+      "Africa",
+    ],
+    datasets: [
+      {
+        data: [61, 16, 11, 7, 5],
+        backgroundColor: [
+          "#34A0A4",
+          "#52B69A",
+          "#76C893",
+          "#99D98C",
+          "#B5E48C",
+        ],
+        hoverOffset: 5,
+      },
+    ],
+  };
 
   const [firstName, setFirstName] = React.useState("");
   const [lastName, setLastName] = React.useState("");
@@ -105,21 +85,58 @@ export default function Data() {
         <div className="col-span-12 flex items-center p-5">
           <Card>
             <Card.Title>
-              <h1 className="pb-4 text-3xl">Current Health</h1>
+              <h1 className="text-3xl">
+                Malaysia Automatic Water Quality Monitoring Stations
+              </h1>
             </Card.Title>
-            <p className="text-justify">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              auctor purus velit, nec porta dui vehicula ac. Vestibulum vitae
-              pretium odio. Aliquam nec lectus eu arcu accumsan condimentum ut
-              in enim. Mauris consequat elementum nunc ut tincidunt. Vestibulum
-              consequat urna ut enim ullamcorper blandit. Cras sit amet elit a
-              metus fermentum dapibus nec at orci. In sodales, sapien eu
-              tincidunt scelerisque, sem risus aliquet ante, non elementum orci
-              ipsum varius eros. Pellentesque non placerat ligula. Sed semper
-              scelerisque iaculis. Sed quis vulputate ipsum. Ut sed fringilla
-              metus. Vestibulum id nibh est. Suspendisse scelerisque luctus
-              facilisis.
+            <p className="py-4 text-justify">
+              Malaysia possesses numerous islands, coastal regions, and seas
+              abundant in aquatic resources. The quality of marine water is
+              crucial for conserving these natural assets.The monitoring
+              initiative for Peninsular Malaysia commenced in 1978 under the
+              Department of Environment. Subsequently, in 1985, it expanded to
+              include Sabah and Sarawak states, and in 1998, the Islands
+              Monitoring Program was introduced.
             </p>
+            <p className="text-justify">ETC ETC</p>
+          </Card>
+        </div>
+
+        <div className="col-span-1 flex items-center px-5 pb-5 lg:col-span-12">
+          <Card className="min-w-full">
+            <Card.Title className="mb-2 border-b-2 pb-2 text-center">
+              <h1 className="text-center text-xl font-bold">
+                World Ecotourism Stats
+              </h1>
+            </Card.Title>
+            <Card.Body className="overflow-x-auto">
+              <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
+                <div className="col-span-1 lg:col-span-7">
+                  <Card className="shadow-lg">
+                    <Card.Body>
+                      <Card.Title>International Tourist Arrivals</Card.Title>
+                      <LineCustom
+                        data={lineData}
+                        options={{
+                          borderColor: "darkblue",
+                          backgroundColor: "darkblue",
+                          hoverBackgroundColor: "white",
+                        }}
+                        style={"mt-5"}
+                      />
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="col-span-1 lg:col-span-5">
+                  <Card className="shadow-lg">
+                    <Card.Body>
+                      <Card.Title>Regional Share (%)</Card.Title>
+                      <DoughnutCustom data={doughnutPatientData} />
+                    </Card.Body>
+                  </Card>
+                </div>
+              </div>
+            </Card.Body>
           </Card>
         </div>
         <div className="col-span-12">
@@ -195,7 +212,7 @@ export default function Data() {
                     }}
                     color="primary"
                   >
-                    Search
+                    Submit
                   </Button>
                 </div>
               </Row>

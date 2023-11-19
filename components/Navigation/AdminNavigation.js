@@ -5,19 +5,31 @@ import Link from "next/link";
 // Icon Imports
 import { IconContext } from "react-icons";
 import {
+  GiContract,
   GiCycling,
   GiDivingHelmet,
   GiIsland,
   GiJungle,
+  GiNotebook,
   GiSnorkel,
 } from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
-import { FaCirclePlus, FaPlus } from "react-icons/fa6";
+import {
+  FaBook,
+  FaCalendar,
+  FaCirclePlus,
+  FaGear,
+  FaPersonSwimming,
+  FaPlus,
+  FaServicestack,
+  FaUser,
+} from "react-icons/fa6";
 import { Button } from "react-daisyui";
 import { MdKayaking, MdSurfing } from "react-icons/md";
-import { IoBoat } from "react-icons/io5";
+import { IoBoat, IoBusiness } from "react-icons/io5";
+import { PiSwimmingPool } from "react-icons/pi";
 
-function BusinessOwnerNavigation() {
+function AdminNavigation() {
   const [locationRef, setLocationRef] = React.useState("");
   const [counter, setCounter] = React.useState(0);
   const [tempRoutes, setTempRoutes] = React.useState([]);
@@ -54,101 +66,99 @@ function BusinessOwnerNavigation() {
 
   const routes = [
     {
-      title: "KAYAKING",
+      title: "USER",
       icon: (
-        <MdKayaking
+        <FaUser size={50} fill="white" style={{ objectFit: "cover" }} alt="" />
+      ),
+      route: "/admin",
+    },
+    {
+      title: "ROLE",
+      icon: (
+        <FaGear size={50} fill="white" style={{ objectFit: "cover" }} alt="" />
+      ),
+      route: "/admin",
+    },
+    {
+      title: "CONTRACT",
+      icon: (
+        <GiContract
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/kayaking",
+      route: "/admin",
     },
     {
-      title: "SNORKELING",
+      title: "REVIEW",
       icon: (
-        <GiSnorkel
+        <FaBook size={50} fill="white" style={{ objectFit: "cover" }} alt="" />
+      ),
+      route: "/admin",
+    },
+    {
+      title: "SCHEDULER",
+      icon: (
+        <FaCalendar
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/snorkeling",
+      route: "/admin",
     },
     {
-      title: "WIND SURFING",
+      title: "ACTIVITIES",
       icon: (
-        <MdSurfing
+        <FaPersonSwimming
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/windSurfing",
+      route: "/admin",
     },
     {
-      title: "DIVING",
+      title: "SERVICES",
       icon: (
-        <GiDivingHelmet
+        <FaServicestack
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/diving",
+      route: "/admin",
     },
     {
-      title: "ISLAND HOPPING",
+      title: "GUIDELINES",
       icon: (
-        <GiIsland
+        <GiNotebook
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/islandHopping",
+      route: "/admin",
     },
     {
-      title: "BOAT TOUR",
+      title: "BUSINESS",
       icon: (
-        <IoBoat size={50} fill="white" style={{ objectFit: "cover" }} alt="" />
+        <IoBusiness
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
       ),
-      route: "/businessOwner/activity/boatTour",
+      route: "/admin",
     },
   ];
-
-  function addIcon() {
-    return (
-      <div className="p-4" key={`random-key-string`}>
-        <div
-          className="btn btn-circle self-center"
-          style={{
-            backgroundColor: "#15FF25",
-            border: "none",
-            borderRadius: "50%",
-            width: "50px",
-            height: "50px",
-            justifyContent: "center",
-            alignItems: "center",
-            display: "flex",
-            boxShadow: "0 6px 4px rgba(100, 100, 100, 0.15)",
-          }}
-        >
-          <FaPlus
-            fill="white"
-            size={20}
-            style={{ objectFit: "cover", color: "white" }}
-            alt=""
-          />
-        </div>
-      </div>
-    );
-  }
 
   const router = useRouter();
 
@@ -188,14 +198,12 @@ function BusinessOwnerNavigation() {
                   </div>
                 </Link>
               </div>
-              {key === routes.length - 1 ? addIcon() : <div />}
             </>
           );
         })}
-        {!routes || routes.length === 0 ? addIcon() : <div />}
       </div>
     </>
   );
 }
 
-export default BusinessOwnerNavigation;
+export default AdminNavigation;

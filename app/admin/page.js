@@ -5,21 +5,31 @@ import LineCustom from "@components/ChartCustom/LineCustom";
 import DoughnutCustom from "@components/ChartCustom/DoughnutCustom";
 import BarCustom from "@components/ChartCustom/BarCustom";
 
-export default function BusinessOwner() {
+export default function Admin() {
   const lineData = {
     labels: [
-      "Week 24",
-      "Week 25",
-      "Week 26",
-      "Week 27",
-      "Week 28",
-      "Week 29",
-      "Week 30",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
     ],
     datasets: [
       {
-        data: [5, 2, 9, 1, 3, 7, 0],
-        borderColor: "red",
+        data: [
+          1012.31, 1063.21, 1115.82, 1154.61, 1207.03, 1248.07, 1339.57,
+          1414.06, 1463.68, 406.89, 458.39, 969.4,
+        ],
+        borderColor: "darkblue",
+        label: "International Tourist Arrivals (million)",
       },
       // {
       //   data: [0.5, 0.1, 0.6, 0.3, 0.8, 0, 0.4],
@@ -29,22 +39,48 @@ export default function BusinessOwner() {
   };
 
   const doughnutPatientData = {
-    labels: ["Neurology", "Orthopaedics", "Cardiology", "Pathology"],
+    labels: [
+      "Europe",
+      "Americas",
+      "Asia and the Pacific",
+      "Middle East",
+      "Africa",
+    ],
     datasets: [
       {
-        data: [20, 11, 5, 7],
-        backgroundColor: ["#EEEEEE", "#068FFF", "#4E4FEB", "#000000"],
+        data: [61, 16, 11, 7, 5],
+        backgroundColor: [
+          "#34A0A4",
+          "#52B69A",
+          "#76C893",
+          "#99D98C",
+          "#B5E48C",
+        ],
         hoverOffset: 5,
       },
     ],
   };
 
   const doughnutDoctorData = {
-    labels: ["Neurology", "Orthopaedics", "Cardiology", "Pathology"],
+    labels: [
+      "Kayaking",
+      "Snorkeling",
+      "Wind Surfing",
+      "Diving",
+      "Island Hopping",
+      "Boat Tour",
+    ],
     datasets: [
       {
-        data: [2, 3, 1, 3],
-        backgroundColor: ["#FFF3E2", "#FFE5CA", "#FA9884", "#E74646"],
+        data: [23, 20, 19, 14, 12, 5],
+        backgroundColor: [
+          "#168AAD",
+          "#34A0A4",
+          "#52B69A",
+          "#76C893",
+          "#99D98C",
+          "#B5E48C",
+        ],
         hoverOffset: 5,
       },
     ],
@@ -67,12 +103,15 @@ export default function BusinessOwner() {
     ],
     datasets: [
       {
-        data: [2, 3, 7, 1, 2, 5, 9, 11, 7, 3, 6, 1],
+        data: [
+          1230, 3024, 2304, 2501, 2724, 5320, 7982, 10239, 15229, 19120, 9210,
+          0,
+        ],
         backgroundColor: "#EDF4FF",
         borderColor: "rgb(54, 162, 235)",
         borderWidth: 1,
-        barThickness: 35,
-        label: "Admisssion Rate (%)",
+        barThickness: 20,
+        label: "Sales (RM)",
       },
     ],
   };
@@ -84,61 +123,47 @@ export default function BusinessOwner() {
           Dashboard
         </h1>
         <Card.Body>
-          <Row>
-            <Col>
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
+            <div className="col-span-1 lg:col-span-12">
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
-                    World Health Analytics
+                    World Ecotourism Stats
                   </h1>
                 </Card.Title>
                 <Card.Body className="overflow-x-auto">
-                  <Row>
-                    <Col colSize={7}>
+                  <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
+                    <div className="col-span-1 lg:col-span-7">
                       <Card className="shadow-lg">
                         <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <BarCustom data={barData} />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col colSize={5}>
-                      <Card className="shadow-lg">
-                        <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <DoughnutCustom data={doughnutPatientData} />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col colSize={5}>
-                      <Card className="shadow-lg">
-                        <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <DoughnutCustom data={doughnutDoctorData} />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col colSize={7}>
-                      <Card className="shadow-lg">
-                        <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
+                          <Card.Title>
+                            International Tourist Arrivals
+                          </Card.Title>
                           <LineCustom
                             data={lineData}
                             options={{
-                              borderColor: "red",
-                              backgroundColor: "red",
+                              borderColor: "darkblue",
+                              backgroundColor: "darkblue",
                               hoverBackgroundColor: "white",
                             }}
                             style={"mt-5"}
                           />
                         </Card.Body>
                       </Card>
-                    </Col>
-                  </Row>
+                    </div>
+                    <div className="col-span-1 lg:col-span-5">
+                      <Card className="shadow-lg">
+                        <Card.Body>
+                          <Card.Title>Regional Share (%)</Card.Title>
+                          <DoughnutCustom data={doughnutPatientData} />
+                        </Card.Body>
+                      </Card>
+                    </div>
+                  </div>
                 </Card.Body>
               </Card>
-            </Col>
-            <Col colSize={3}>
+            </div>
+            <div className="col-span-1 lg:col-span-3">
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
@@ -186,8 +211,8 @@ export default function BusinessOwner() {
                   </Table>
                 </Card.Body>
               </Card>
-            </Col>
-            <Col colSize={9}>
+            </div>
+            <div className="col-span-1 lg:col-span-9">
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
@@ -195,52 +220,28 @@ export default function BusinessOwner() {
                   </h1>
                 </Card.Title>
                 <Card.Body className="overflow-x-auto">
-                  <Row>
-                    <Col colSize={12}>
+                  <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
+                    <div className="col-span-1 lg:col-span-5">
                       <Card className="shadow-lg">
                         <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <BarCustom data={barData} />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col colSize={6}>
-                      <Card className="shadow-lg">
-                        <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <DoughnutCustom data={doughnutPatientData} />
-                        </Card.Body>
-                      </Card>
-                    </Col>
-                    <Col colSize={6}>
-                      <Card className="shadow-lg">
-                        <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
+                          <Card.Title>Activity Popularity</Card.Title>
                           <DoughnutCustom data={doughnutDoctorData} />
                         </Card.Body>
                       </Card>
-                    </Col>
-                    <Col colSize={12}>
+                    </div>
+                    <div className="col-span-1 lg:col-span-7">
                       <Card className="shadow-lg">
                         <Card.Body>
-                          <Card.Title>Patients Admission Rate</Card.Title>
-                          <LineCustom
-                            data={lineData}
-                            options={{
-                              borderColor: "red",
-                              backgroundColor: "red",
-                              hoverBackgroundColor: "white",
-                            }}
-                            style={"mt-5"}
-                          />
+                          <Card.Title>Total Sales</Card.Title>
+                          <BarCustom data={barData} />
                         </Card.Body>
                       </Card>
-                    </Col>
-                  </Row>
+                    </div>
+                  </div>
                 </Card.Body>
               </Card>
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Card.Body>
       </Card>
     </>

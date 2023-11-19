@@ -20,14 +20,15 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 function LineCustom({ data, height, options, style }) {
   const lineOptions = {
     // maintainAspectRatio: false,
     plugins: {
-      legend: {
+      legend: {},
+      title: {
         display: false,
       },
     },
@@ -58,7 +59,7 @@ function LineCustom({ data, height, options, style }) {
     maintainAspectRatio: false,
   };
   return (
-    <div className={`h-72 w-[95%] mx-auto`}>
+    <div className={`mx-auto h-72 w-[95%]`}>
       <Line data={data} options={lineOptions} className={style} />
     </div>
   );
