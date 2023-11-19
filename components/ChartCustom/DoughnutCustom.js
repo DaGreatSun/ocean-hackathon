@@ -21,7 +21,7 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 function DoughnutCustom({ data, style, height }) {
@@ -32,10 +32,9 @@ function DoughnutCustom({ data, style, height }) {
     rotation: 0,
     circumference: 360,
     borderRadius: 3,
-    offset: 3,
   };
   return (
-    <div className={`relative flex justify-center mx-auto h-72 w-[95%]`}>
+    <div className={`relative flex h-72 items-center`}>
       <Doughnut
         redraw
         data={data}

@@ -5,7 +5,7 @@ import LineCustom from "@components/ChartCustom/LineCustom";
 import DoughnutCustom from "@components/ChartCustom/DoughnutCustom";
 import BarCustom from "@components/ChartCustom/BarCustom";
 
-export default function Kayaking() {
+export default function BoatTour() {
   const lineData = {
     labels: [
       "Jan",
@@ -33,7 +33,7 @@ export default function Kayaking() {
     <>
       <Card>
         <h1 className="mb-5 border-b-2 py-2 text-center text-3xl font-bold">
-          Kayaking
+          Boat Tour
         </h1>
         <Card.Body>
           <Row>

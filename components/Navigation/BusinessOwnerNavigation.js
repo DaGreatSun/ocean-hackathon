@@ -4,11 +4,17 @@ import Link from "next/link";
 
 // Icon Imports
 import { IconContext } from "react-icons";
-import { GiBoatEngine, GiCycling, GiJungle } from "react-icons/gi";
+import {
+  GiCycling,
+  GiDivingHelmet,
+  GiIsland,
+  GiJungle,
+  GiSnorkel,
+} from "react-icons/gi";
 import { IoMdAdd } from "react-icons/io";
 import { FaCirclePlus, FaPlus } from "react-icons/fa6";
 import { Button } from "react-daisyui";
-import { MdKayaking } from "react-icons/md";
+import { MdKayaking, MdSurfing } from "react-icons/md";
 import { IoBoat } from "react-icons/io5";
 
 function BusinessOwnerNavigation() {
@@ -60,16 +66,52 @@ function BusinessOwnerNavigation() {
       route: "/businessOwner/activity/kayaking",
     },
     {
-      title: "JUNGLE TREKKING",
+      title: "SNORKELING",
       icon: (
-        <GiJungle
+        <GiSnorkel
           size={50}
           fill="white"
           style={{ objectFit: "cover" }}
           alt=""
         />
       ),
-      route: "/businessOwner/activity/jungleTrekking",
+      route: "/businessOwner/activity/snorkeling",
+    },
+    {
+      title: "WIND SURFING",
+      icon: (
+        <MdSurfing
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
+      ),
+      route: "/businessOwner/activity/windSurfing",
+    },
+    {
+      title: "DIVING",
+      icon: (
+        <GiDivingHelmet
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
+      ),
+      route: "/businessOwner/activity/diving",
+    },
+    {
+      title: "ISLAND HOPPING",
+      icon: (
+        <GiIsland
+          size={50}
+          fill="white"
+          style={{ objectFit: "cover" }}
+          alt=""
+        />
+      ),
+      route: "/businessOwner/activity/islandHopping",
     },
     {
       title: "BOAT TOUR",
@@ -82,7 +124,7 @@ function BusinessOwnerNavigation() {
 
   function addIcon() {
     return (
-      <div className="p-4">
+      <div className="p-4" key={`random-key-string`}>
         <div
           className="btn btn-circle self-center"
           style={{

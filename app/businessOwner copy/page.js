@@ -84,8 +84,8 @@ export default function BusinessOwner() {
           Dashboard
         </h1>
         <Card.Body>
-          <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
-            <div className="col-span-1 lg:col-span-12">
+          <Row>
+            <Col>
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
@@ -93,32 +93,32 @@ export default function BusinessOwner() {
                   </h1>
                 </Card.Title>
                 <Card.Body className="overflow-x-auto">
-                  <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
-                    <div className="col-span-1 lg:col-span-7">
+                  <Row>
+                    <Col colSize={7}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <BarCustom data={barData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-5">
+                    </Col>
+                    <Col colSize={5}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <DoughnutCustom data={doughnutPatientData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-5">
+                    </Col>
+                    <Col colSize={5}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <DoughnutCustom data={doughnutDoctorData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-7">
+                    </Col>
+                    <Col colSize={7}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
@@ -133,12 +133,12 @@ export default function BusinessOwner() {
                           />
                         </Card.Body>
                       </Card>
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
                 </Card.Body>
               </Card>
-            </div>
-            <div className="col-span-1 lg:col-span-3">
+            </Col>
+            <Col colSize={3}>
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
@@ -186,8 +186,8 @@ export default function BusinessOwner() {
                   </Table>
                 </Card.Body>
               </Card>
-            </div>
-            <div className="col-span-1 lg:col-span-9">
+            </Col>
+            <Col colSize={9}>
               <Card className="min-w-full px-4">
                 <Card.Title className="mb-2 border-b-2 pb-2 text-center">
                   <h1 className="text-center text-xl font-bold">
@@ -195,32 +195,32 @@ export default function BusinessOwner() {
                   </h1>
                 </Card.Title>
                 <Card.Body className="overflow-x-auto">
-                  <div className="grid grid-cols-1 gap-2 lg:grid-cols-12">
-                    <div className="col-span-1 lg:col-span-7">
+                  <Row>
+                    <Col colSize={12}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <BarCustom data={barData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-5">
+                    </Col>
+                    <Col colSize={6}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <DoughnutCustom data={doughnutPatientData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-5">
+                    </Col>
+                    <Col colSize={6}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
                           <DoughnutCustom data={doughnutDoctorData} />
                         </Card.Body>
                       </Card>
-                    </div>
-                    <div className="col-span-1 lg:col-span-7">
+                    </Col>
+                    <Col colSize={12}>
                       <Card className="shadow-lg">
                         <Card.Body>
                           <Card.Title>Patients Admission Rate</Card.Title>
@@ -235,12 +235,12 @@ export default function BusinessOwner() {
                           />
                         </Card.Body>
                       </Card>
-                    </div>
-                  </div>
+                    </Col>
+                  </Row>
                 </Card.Body>
               </Card>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </Card.Body>
       </Card>
     </>

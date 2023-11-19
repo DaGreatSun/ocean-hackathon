@@ -58,18 +58,9 @@ function Header(props) {
               <a className="justify-between text-sm">Settings</a>
             </li>
             <li>
-              <button
-                onClick={(e) => {
-                  e.preventDefault();
-                  userObj.token = null;
-                  localStorage.setItem("userObject", JSON.stringify(userObj));
-
-                  Router.push("/auth/login");
-                }}
-                className="text-sm"
-              >
-                Sign Out
-              </button>
+              <Link href={"/home"}>
+                <button className="text-sm">Sign Out</button>
+              </Link>
             </li>
           </ul>
         </div>

@@ -62,6 +62,9 @@ export default function Home() {
                     <Link href={"/admin"}>{renderAdmin()}</Link>
                   </Col>
                 </div>
+                <Button className="mt-5 w-full" color="success">
+                  No Account? Register Here!
+                </Button>
               </div>
             </Card.Body>
           </Card>
