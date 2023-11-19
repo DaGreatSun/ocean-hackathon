@@ -18,7 +18,7 @@ export default function About() {
             style={{
               objectFit: "cover",
               width: "100%",
-              height: 350,
+              height: 400,
               objectPosition: "50% 75%",
             }}
             alt=""
@@ -52,8 +52,8 @@ export default function About() {
             style={{
               objectFit: "cover",
               width: "100%",
-              height: 350,
-              objectPosition: "50% 75%",
+              height: 400,
+              objectPosition: "50% 35%",
             }}
             alt=""
           />

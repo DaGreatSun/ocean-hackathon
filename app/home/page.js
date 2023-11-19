@@ -58,7 +58,15 @@ export default function Home() {
     { name: "Green Fins", image: "/assets/img/collaborators/greenfins.png" },
     {
       name: "Ministry of Tourism Malaysia",
-      image: "/assets/img/collaborators/ministry-of-tourism-malaysia.png",
+      image: "/assets/img/collaborators/MAFS.png",
+    },
+    {
+      name: "Ministry of Tourism Malaysia",
+      image: "/assets/img/collaborators/NRECC.png",
+    },
+    {
+      name: "Ministry of Tourism Malaysia",
+      image: "/assets/img/collaborators/MOTAC.png",
     },
   ];
 

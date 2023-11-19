@@ -40,21 +40,21 @@ function Header(props) {
   React.useEffect(() => {}, []);
 
   return (
-    <div className="w-full items-center border-b-2 border-b-gray-300 bg-white bg-opacity-95 lg:flex lg:justify-between lg:px-10">
+    <div className="sticky -top-1 z-50 w-full items-center border-b-2 border-b-gray-300 bg-white bg-opacity-95 lg:flex lg:justify-between lg:px-10">
       <div>
-        <div className="grid grid-cols-1 lg:grid-cols-4">
-          <Col colSize={1} style={" items-center"}>
+        <div className="grid grid-cols-2 lg:grid-cols-4">
+          <div className={"col-span-1 items-center"}>
             {navButton("HOME", "/home")}
-          </Col>
-          <Col colSize={1} style={"items-center"}>
+          </div>
+          <div className={"col-span-1 items-center"}>
             {navButton("ABOUT US", "/home/about")}
-          </Col>
-          <Col colSize={1} style={"items-center"}>
+          </div>
+          <div className={"col-span-1 items-center"}>
             {navButton("DATA", "/home/data")}
-          </Col>
-          <Col colSize={1} style={"items-center"}>
+          </div>
+          <div className={"col-span-1 items-center"}>
             {navButton("SIGN IN", "/login")}
-          </Col>
+          </div>
         </div>
       </div>
     </div>
