@@ -18,29 +18,48 @@ export default function Home() {
       image: "/pictures/dolphins.jpg",
     },
     {
-      name: "",
-      description: "",
+      name: "Taman Negara",
+      description: "Ancient Rainforest, Kuala Tahan Village",
+      offer: "25",
+      image: "/pictures/taman-negara.jpg",
+    },
+    {
+      name: "Pulau Tioman",
+      description: "Tropical Rain Forest, Hilly, Beach",
       offer: "30",
       image: "/pictures/archipelago.jpg",
     },
-    { name: "", description: "", offer: "", image: "/pictures/barnacles.jpg" },
     {
-      name: "",
-      description: "",
+      name: "Kinabatangan",
+      description: "River, Wildlife, Orang Utans, Jungle",
+      offer: "50",
+      image: "/pictures/barnacles.jpg",
+    },
+    {
+      name: "Pulau Redang",
+      description: "Island, Sea Turtle, Beach",
       offer: "40",
       image: "/pictures/beach_hammock.jpg",
     },
-    { name: "", description: "", offer: "", image: "/pictures/caves.jpg" },
     {
-      name: "",
-      description: "",
+      name: "Kuala Sepetang",
+      description: "Seafood, Ecotourism, Dolphin",
+      offer: "30",
+      image: "/pictures/caves.jpg",
+    },
+    {
+      name: "Banggi Island",
+      description: "Island, Boat Tour",
       offer: "15",
       image: "/pictures/hut_by_the_beach.jpg",
     },
-    { name: "", description: "", offer: "25", image: "/pictures/starfish.jpg" },
   ];
   const partnerArr = [
     { name: "Green Fins", image: "/assets/img/collaborators/greenfins.png" },
+    {
+      name: "Ministry of Tourism Malaysia",
+      image: "/assets/img/collaborators/ministry-of-tourism-malaysia.png",
+    },
   ];
 
   function promotionCarousel() {
@@ -86,7 +105,7 @@ export default function Home() {
 
   function partners() {
     return (
-      <div className="flex gap-2">
+      <div className="flex flex-wrap place-content-center gap-2">
         {partnerArr.map((item, key) => partnerElement(item, key))}
       </div>
     );

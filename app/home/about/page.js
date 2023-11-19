@@ -39,7 +39,7 @@ export default function About() {
           <div>
             <h1 className="pb-4 text-3xl">Our Team</h1>
             <p className="text-justify">
-              Sea D&E is a platform for booking your next ocean adventure,
+              FanSEA is a platform for booking your next ocean adventure,
               whether it is to find coastal accommodations that adhere to green
               practices, or activities like scuba diving, snorkeling, and
               kayaking that adhere to best practice for a wholesome experience.

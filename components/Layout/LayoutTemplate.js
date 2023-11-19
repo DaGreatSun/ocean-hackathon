@@ -6,23 +6,36 @@ import {
   FaPhone,
   FaYoutube,
 } from "react-icons/fa6";
-import { IoBrowsers } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 
 export default function LayoutTemplate({ children }) {
   return (
     <>
-      <img
-        src={"/assets/img/top.jpg"}
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-          width: "100%",
-          height: 350,
-          objectPosition: "50% 75%",
-        }}
-        alt=""
-      />
+      <div className="relative">
+        <img
+          src={"/assets/img/top.jpg"}
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+            width: "100%",
+            height: 350,
+            objectPosition: "50% 75%",
+          }}
+          alt=""
+        />
+        <div className="absolute inset-x-0 bottom-[40px] w-full px-[10%] py-2.5 text-center text-2xl lg:px-[20%]">
+          <img
+            src={"/assets/img/logo.png"}
+            style={{
+              objectFit: "contain",
+              width: "100%",
+              height: 250,
+              objectPosition: "50% 50%",
+            }}
+            alt=""
+          />
+        </div>
+      </div>
       <div className="relative z-10 -mt-10 sm:mx-0 md:mx-[5%]">{children}</div>
       <div className="grid grid-cols-1 bg-[#39729e] lg:grid-cols-2">
         <div className="col-span-1 lg:border-r-2 lg:border-r-black">
