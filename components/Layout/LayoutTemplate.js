@@ -24,16 +24,33 @@ export default function LayoutTemplate({ children }) {
           alt=""
         />
         <div className="absolute inset-x-0 bottom-[40px] w-full px-[10%] py-2.5 text-center text-2xl lg:px-[20%]">
-          <img
-            src={"/assets/img/logo.png"}
-            style={{
-              objectFit: "contain",
-              width: "100%",
-              height: 250,
-              objectPosition: "50% 50%",
-            }}
-            alt=""
-          />
+          <div className="grid grid-cols-12">
+            <div className="col-span-3">
+              <img
+                className="p-3 pl-0"
+                src={"/assets/img/logo-turtle.png"}
+                style={{
+                  objectFit: "contain",
+                  width: "100%",
+                  height: 250,
+                  objectPosition: "50% 50%",
+                }}
+                alt=""
+              />
+            </div>
+            <div className="col-span-9">
+              <img
+                src={"/assets/img/logo.png"}
+                style={{
+                  objectFit: "contain",
+                  width: "100%",
+                  height: 250,
+                  objectPosition: "50% 50%",
+                }}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </div>
       <div className="relative z-10 -mt-10 sm:mx-0 md:mx-[5%]">{children}</div>
