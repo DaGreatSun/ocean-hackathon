@@ -9,6 +9,7 @@ export default function Home() {
   const [date, setDate] = React.useState("");
   const [filter, setFilter] = React.useState("");
 
+  const result = [];
   const promotionArr = [
     {
       name: "Langkawi",
@@ -38,7 +39,9 @@ export default function Home() {
     },
     { name: "", description: "", offer: "25", image: "/pictures/starfish.jpg" },
   ];
-  const result = [{}];
+  const partnerArr = [
+    { name: "Green Fins", image: "/assets/img/collaborators/greenfins.png" },
+  ];
 
   function promotionCarousel() {
     return (
@@ -78,6 +81,31 @@ export default function Home() {
           );
         })}
       </Carousel>
+    );
+  }
+
+  function partners() {
+    return (
+      <div className="flex gap-2">
+        {partnerArr.map((item, key) => partnerElement(item, key))}
+      </div>
+    );
+  }
+
+  function partnerElement(item, key) {
+    return (
+      <div className="flex p-5 align-middle" key={`partners-${key}`}>
+        <img
+          src={item.image}
+          style={{
+            objectFit: "contain",
+            width: 200,
+            maxHeight: 200,
+            objectPosition: "50% 50%",
+          }}
+          alt=""
+        />
+      </div>
     );
   }
 
@@ -170,6 +198,10 @@ export default function Home() {
         <div className="col-span-6 p-2 lg:col-span-12">
           <h1 className="p-3 text-center text-3xl font-bold">Promotions</h1>
           {promotionCarousel()}
+        </div>
+        <div className="col-span-6 p-2 lg:col-span-12">
+          <h1 className="p-3 text-center text-3xl font-bold">Our Partners</h1>
+          {partners()}
         </div>
       </div>
     </>

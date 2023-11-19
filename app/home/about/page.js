@@ -48,7 +48,7 @@ export default function About() {
         </div>
         <div className="col-span-6 my-0 lg:col-span-7">
           <img
-            src={"/pictures/waves_rocks.jpg"}
+            src={"/assets/img/us.png"}
             style={{
               objectFit: "cover",
               width: "100%",
