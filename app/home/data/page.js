@@ -102,7 +102,7 @@ export default function Data() {
           </Card>
         </div>
 
-        <div className="col-span-1 flex items-center px-5 pb-5 lg:col-span-12">
+        <div className="col-span-12 flex items-center px-5 pb-5">
           <Card className="min-w-full">
             <Card.Title className="mb-2 border-b-2 pb-2 text-center">
               <h1 className="text-center text-xl font-bold">
