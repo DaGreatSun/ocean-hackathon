@@ -91,7 +91,7 @@ export default function LayoutTemplate({ children }) {
             </div>
           </div>
         </div>
-        <div className="col-span-1 lg:border-r-2 lg:border-r-black">
+        <div className="col-span-1">
           <h1 className="py-6 text-center text-2xl text-white">Socials</h1>
           <div className="flex place-content-center items-center pb-7">
             <div className="grid grid-cols-1">

@@ -17,12 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={twMerge(
-          roboto.className,
-          "h-screen min-h-full bg-[#e3fdfd]",
-        )}
-      >
+      <body className={twMerge(roboto.className, "min-h-full bg-[#e3fdfd]")}>
         {children}
       </body>
     </html>
